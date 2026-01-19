@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Index = () => {
   return (
     <main className="max-w-2xl mx-auto px-4 py-12">
@@ -5,6 +7,10 @@ const Index = () => {
         <h1 className="text-lg mb-2">[Your Name]</h1>
         <p className="text-muted-foreground">Staff Software Engineer</p>
       </header>
+
+      <nav className="mb-10">
+        <Link to="/posts" className="hover:underline">posts</Link>
+      </nav>
 
       <section className="mb-10">
         <p className="mb-4">
