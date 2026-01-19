@@ -1,0 +1,29 @@
+# Site settings
+title: Staff Software Engineer
+description: Staff Software Engineer with a track record of designing and delivering scalable SaaS and platform systems from zero to production.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://abuzaidkarim.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: /posts/:slug/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /posts/:slug/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

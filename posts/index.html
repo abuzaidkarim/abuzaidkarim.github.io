@@ -1,0 +1,29 @@
+---
+layout: default
+title: Posts
+---
+<main class="max-w-2xl mx-auto px-4 py-12">
+  <header class="mb-12">
+    <a href="/" class="text-muted-foreground hover:text-foreground">
+      &larr; back
+    </a>
+    <h1 class="text-lg mt-4">Posts</h1>
+  </header>
+
+  <section>
+    {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+    {% for post in sorted_posts %}
+    <article class="mb-8 pb-8 border-b border-border {% if forloop.last %}last:border-0{% endif %}">
+      <a href="{{ post.url | relative_url }}" class="block group">
+        <time class="text-muted-foreground text-sm">{{ post.date | date: "%Y-%m-%d" }}</time>
+        <h2 class="text-base mt-1 group-hover:underline">{{ post.title }}</h2>
+        <p class="text-muted-foreground mt-2">{{ post.excerpt }}</p>
+      </a>
+    </article>
+    {% endfor %}
+
+    {% if site.posts.size == 0 %}
+    <p class="text-muted-foreground">No posts yet.</p>
+    {% endif %}
+  </section>
+</main>
