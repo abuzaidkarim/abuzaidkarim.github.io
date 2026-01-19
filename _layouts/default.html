@@ -16,15 +16,14 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
   <meta property="og:description" content="{{ page.description | default: site.description }}">
-  <meta property="og:image" content="{{ page.image | default: '/assets/images/og-image.jpeg' | absolute_url }}">
+  <meta property="og:logo" content="{{ '/assets/images/logo.png' | absolute_url }}">
   <meta property="og:site_name" content="Karim Abuzaid">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:url" content="{{ page.url | absolute_url }}">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
   <meta name="twitter:description" content="{{ page.description | default: site.description }}">
-  <meta name="twitter:image" content="{{ page.image | default: '/assets/images/og-image.jpeg' | absolute_url }}">
   <meta name="twitter:creator" content="@kabuzaid">
 
   <!-- Robots -->
